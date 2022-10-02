@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 void solve();
- 
+
 int32_t  main()
 {
     #ifndef ONLINE_JUDGE
@@ -16,15 +16,16 @@ int32_t  main()
 }
 void solve()
 {
-  int n;
-  cin>>n;
-  int a[1000];
-  double sum=0.0,ans=0.0;
-  for(int i=0;i<n;i++)
-  {
-      cin>>a[i];
-      sum+=a[i];
-  }
-  ans=sum/n;
-  cout<<fixed<<setprecision(12)<<ans<<"\n";
+ 
+    
+    long long int n,h;
+    cin>>n>>h;int sum=0;
+    for(int i=0;i<n;i++)
+    {
+        int x;cin>>x;
+        if(x<=h) sum+=1;
+        else sum+=2;
+    }
+    cout<<sum<<endl;
+ 
 }
