@@ -1,8 +1,9 @@
 #include<iostream>
 #include<bits/stdc++.h>
+#define read_array(arr, len) for (int i = 0; i < len && cin >> arr[i]; i++)
 using namespace std;
 void solve();
-
+ 
 int32_t  main()
 {
     #ifndef ONLINE_JUDGE
@@ -16,8 +17,17 @@ int32_t  main()
 }
 void solve()
 {
-    long long int x;
-    cin>>x;
-    cin >> x;
-    (x % 5 == 0) ? cout << x / 5 : cout << x / 5 + 1;
+ 
+  int mas[5], e = 3;
+   for (int i = 0; i < 4; i++) {
+        cin >> mas[i];
+    }
+    sort(mas, mas + 4);
+    for (int i = 0; i < 3; i++) {
+        if (mas[i] != mas[i + 1]) {
+            e--;
+        }
+    }
+    cout << e;
+ 
 }
